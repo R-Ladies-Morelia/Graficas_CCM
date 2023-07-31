@@ -1,9 +1,10 @@
 # Equipo 1
 
 ## Integrantes
-Mariel
-Aline
-Evelia
+
+- Mariel
+- Aline
+- Evelia Coss
 
 ## Material
 Descarga el archivo X.csv para realizar el siguiente ejercicio:
