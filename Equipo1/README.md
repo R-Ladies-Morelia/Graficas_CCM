@@ -2,8 +2,8 @@
 
 ## Integrantes
 
-- Mariel
-- Aline
+- Mariel Chaveste
+- Aline Pingarroni
 - Evelia Coss
 
 ## Material
