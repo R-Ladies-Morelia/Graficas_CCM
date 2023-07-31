@@ -1,14 +1,6 @@
-# Equipo 1
+# Curso de verano con Rladies
 
-## Integrantes
-Mariel
-Aline
-Evelia
+Fecha 31 de julio y 1 de agosto
 
-## Material
-Descarga el archivo X.csv para realizar el siguiente ejercicio:
 
-```
-head(x.csv)
-```
 
