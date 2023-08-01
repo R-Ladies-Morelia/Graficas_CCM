@@ -11,7 +11,8 @@ datos$Categoria <- as.factor(datos$Categoria)
 eventos <- datos %>%
   group_by(Categoria, Año)%>%
   summarize(Cantidad_Asistentes = sum(Asistentes, na.rm = TRUE),
-            Cantidad_Eventos = n())
+            Cantidad_Eventos = n())%>%
+  complete(fill = list(Cantidad_Eventos = 0))
 
 # Crear todas las combinaciones de Categoría y Año
 categorias_unicas <- eventos$Categoria %>% unique()
