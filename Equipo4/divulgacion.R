@@ -3,7 +3,7 @@ library(tidyverse)
 # Descargar Tabla de Equipo 4 desde el drive como TSV
 # Cambiar el nombre de la tabla a divulgacion_CCM.tsv
 # Quitarle los acentos en bash: sed -i 'y/áéíóú/aeiou/' divulgacion_CCM.tsv
-setwd("Graficas_CCM/Equipo4/") # Poner el directorio apropiado
+setwd("~/Documentos/carpentries/R_ladies/Graficas_CCM/Equipo2/") # Poner el directorio apropiado
 datos <- read.delim("divulgacion_CCM.tsv", header = TRUE, na.strings = "")
 
 
@@ -11,8 +11,7 @@ datos$Categoria <- as.factor(datos$Categoria)
 eventos <- datos %>%
   group_by(Categoria, Año)%>%
   summarize(Cantidad_Asistentes = sum(Asistentes, na.rm = TRUE),
-            Cantidad_Eventos = n())%>%
-  complete(fill = list(Cantidad_Eventos = 0))
+            Cantidad_Eventos = n())
 
 # Crear todas las combinaciones de Categoría y Año
 categorias_unicas <- eventos$Categoria %>% unique()
