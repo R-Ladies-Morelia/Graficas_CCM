@@ -81,15 +81,15 @@ library(ggiraph)
 library(plotly)
 
 
-ggraph(g, layout = 'fr') + 
+p <- ggraph(g, layout = 'fr') + 
   geom_edge_link(alpha = 0.5, color = "black")+
   geom_node_point(aes(size = n*3, color = as.factor(Area)))+
   geom_node_label( aes(filter = n>=4,label = Nombre),nudge_x = -1,nudge_y = -1, size = 3)+
-  labs(size = "", color = "Area")+
+  labs(size = "", color = "Area", caption = "Datos de septiembre 2021 a agosto 2022", title = "Redes de colaboración")+
   guides(size = "none")+
   theme_void()
 
-ggsave(filename = "ColabPlot.png", width = 30, height = 20, units = "cm", bg = "white")
+ggsave(p, filename = "ColabPlot.png", width = 20, height = 15, units = "cm", bg = "white")
 
 ## Opción para hacerla interactiva (incompleta)
 # ggplotly(p) # Todavía no está implementada la función que pinta las líneas
