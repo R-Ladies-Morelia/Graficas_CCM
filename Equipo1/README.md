@@ -7,9 +7,6 @@
 - Evelia Coss
 
 ## Material
-Descarga el archivo BD_Est_Acade.csv para realizar los siguientes ejercicios:
+Descarga el archivo BD_Est_Acade.csv para realizar los siguientes ejercicios
 
-```
-head(x.csv)
-```
 
